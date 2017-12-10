@@ -1,0 +1,69 @@
+
+//**************************** Font Variables **********************************
+
+// $font-url--google           : "url"; if you want add your favorite google font.
+
+$font-family--primary          : "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family--secondary        : Arial, sans-serif;
+
+// Values for Helvetica Neue found in https://www.cssfontstack.com/Helvetica
+$font-weight--thin             : 100;
+$font-weight--normal           : 400;
+$font-weight--bold             : bold;
+
+
+//****************************** Color *****************************************
+
+$white                         : #fff;
+$grey                          : #C3C1BC;
+$water-green                   : #9FE2BF;
+$on-blue                       : #00DFFF;
+$green                         : #19e6b3;
+
+$fountain-blue                 : #52bab3;
+$emerald                       : #5ece7f;
+$sunglo                        : #e67478;
+$coral                         : #ff784f;
+$purple-majesty                : #9279c3;
+$scooter                       : #39add1;
+
+$color-text--base              : $grey;
+$color-text--light             : lighen($grey, 20%);
+$color-text--dark              : darken($grey, 20%);
+
+$palettes: (
+  grey: (
+    xx-light                   : lighten($grey, 30%),
+    x-light                    : lighten($grey, 20%),
+    light                      : lighten($grey, 10%),
+    base                       : $grey,
+    dark                       : danken($grey, 10%),
+    x-dark                     : darken($grey, 20%),
+    xx-dark                    : darken($grey, 30%)
+  ),
+  black: (
+    xx-light                   : lighten($grey, 30%),
+    x-light                    : lighten($grey, 20%),
+    light                      : lighten($grey, 10%),
+    base                       : $grey,
+    dark                       : danken($grey, 10%),
+    x-dark                     : darken($grey, 20%),
+    xx-dark                    : darken($grey, 30%)
+  )
+);
+
+//********************************** Text **************************************
+
+$base__font-size               : 16px;
+$base__line-height             : 24px;
+
+
+//********************************** Maps **************************************
+
+$ui-colors: (
+  default                      : $fountain-blue,
+  success                      : $emerald,
+  error                        : $sunglo,
+  warning                      : $coral,
+  info                         : $purple-majesty
+);
