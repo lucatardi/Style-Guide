@@ -1,2 +1,30 @@
 
 //*************************      Navigation      *******************************
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  margin: 0; // to remove indentation for bullettes
+  padding: 0; // to remove indentation for bullettes
+  list-style-type: none; // remove bullettes from list
+}
+
+.img--logo {
+  width: 150px;
+  padding: 20px;
+}
+
+.nav__item a {
+  display: block;
+  color: $color-text--light;
+  font-size: 1.125em;
+  font-weight: $font-weight--normal;
+  text-align: center;
+  padding: 15px 0;
+  border-radius: 3%;
+  text-decoration: none;
+  &:hover {
+    background-color: $green;
+    color: $white;
+  }
+}
