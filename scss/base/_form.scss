@@ -5,6 +5,18 @@
   padding: 50px 0;
   display: flex;
   flex-direction: column;
+  @include e(input) {
+    margin: 20px 0;
+    padding: 10px 5px;
+    border: none;
+    border-bottom: solid $green 4px;
+  };
+  @include e(label) {
+    display: block;
+    @include m(hidden) {
+      @extend .srt;
+    };
+  }
 }
 
 .form .img--avatar {

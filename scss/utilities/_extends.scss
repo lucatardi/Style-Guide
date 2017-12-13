@@ -1,0 +1,37 @@
+
+//**************************      Extends      **********************************
+
+// Nav-Items
+
+%nav-item-display {
+  // add later
+}
+
+%nav-item-link {
+  display: block;
+  text-decoration: none;
+  padding: 15px 0;
+  border-radius: 3%;
+}
+
+%nav-item-on {
+  background-color: $water-green;
+  color: $white;
+}
+
+
+// headline
+
+%headline-prim {
+  font-family: $font-family--primary;
+  weight: $font-weight--normal;
+  color: $water-green;
+  padding: 0 20px;
+}
+
+%headline-sec {
+  font-family: $font-family--secondary;
+  weight: $font-weight--normal;
+  color: $grey;
+  font-size: em(24px);
+}

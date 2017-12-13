@@ -1,0 +1,50 @@
+
+//*************************      Grid Colomn      *******************************
+
+@media (min-width: 769px) {
+  @for $i from 1 through $g-col-count {
+    $context: g-context($g-col-width, $g-col-count, $g-gutter-width) !global;
+    // with !global the scope of the variable become global.
+    $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
+
+    .grid__col--#{$i} {
+      width: percentual( $target / $context);
+    }
+  }
+}
+
+
+[class^="grid__col--"] { //target all the classes starting with "grid__col--"
+  @media (min-width: 1px) and (max-width: 768px) {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  @media (min-width: 769px) {
+    @include doubly(percentage($g-gutter-width / $context));
+    float: left;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    &:last-of-type {
+      float: right;
+    }
+  }
+}
+
+
+//*************************      Grid Rows     *******************************
+
+.grid__row {
+  @extend .clearfix;
+  @extend .centered;
+  width: 90%;
+
+  [class*="grid__col--"] > & {             // select all the class starting with
+    width: 100%;                       // "grid__col--" inside a grid__row class
+  }
+
+  @media (min-width: 1100px) {
+    max-width: $g-cont-max-w;
+  }
+}

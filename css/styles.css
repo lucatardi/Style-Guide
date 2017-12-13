@@ -1,29 +1,53 @@
-.container {
-  margin: 0 10%;
-  display: flex;
-  flex-direction: column; }
+.nav__item a {
+  display: block;
+  text-decoration: none;
+  padding: 15px 0;
+  border-radius: 3%; }
 
-.grid__row {
-  display: flex;
-  flex-direction: column; }
+.nav__item a:hover {
+  background-color: #60f7cf;
+  color: #fff; }
 
-.grid__col--3 {
-  align-self: center; }
+.headline--primary {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  weight: 400;
+  color: #60f7cf;
+  padding: 0 20px; }
 
-.grid__col--12 .card p {
+.headline--secondary {
+  font-family: Arial, sans-serif;
+  weight: 400;
+  color: #C3C1BC;
+  font-size: em(24px); }
+
+.srt, .form__label--hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.clearfix:after, .grid__row:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.centered, .grid__row {
+  float: none;
+  margin-left: auto;
+  margin-right: auto; }
+
+.card p {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   weight: 400;
   padding: 70px 0;
   line-height: 1.5;
   color: lighen(#C3C1BC, 20%); }
 
-.headline--primary {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  weight: 400;
-  color: #19e6b3;
-  padding: 0 20px; }
-
-.grid__col--8 .card p {
+.card p {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   weight: 400;
   padding: 30px 0 20px;
@@ -32,24 +56,32 @@
 
 .blockquote {
   padding-left: 20px;
-  border-left: solid #19e6b3 6px;
+  border-left: solid #60f7cf 6px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  weight: 400;
-  color: lighen(#C3C1BC, 20%);
+  weight: 100;
+  color: #938f86;
   font-style: italic;
-  line-height: 1.5; }
+  line-height: 1.2;
+  font-size: 22px; }
 
 .form {
   padding: 50px 0;
   display: flex;
   flex-direction: column; }
+  .form__input {
+    margin: 20px 0;
+    padding: 10px 5px;
+    border: none;
+    border-bottom: solid #10ba35 4px; }
+  .form__label {
+    display: block; }
 
 .form .img--avatar {
   padding: 20px;
   align-self: center; }
 
 .btn--default {
-  background-color: #52bab3; }
+  background-color: #23ddff; }
 .btn--success {
   background-color: #5ece7f; }
 .btn--error {
@@ -59,28 +91,93 @@
 .btn--info {
   background-color: #9279c3; }
 
+.theme__colors {
+  padding: 15px 0;
+  margin: 10px 0; }
+
 .nav {
   display: flex;
   flex-direction: column;
   margin: 0;
   padding: 0;
   list-style-type: none; }
+  .nav__item {
+    color: lighen(#C3C1BC, 20%);
+    font-size: 1.125em;
+    font-weight: 400;
+    text-align: center; }
+    .nav__item a {
+      color: #C3C1BC; }
 
 .img--logo {
   width: 150px;
   padding: 20px; }
 
-.nav__item a {
+.img--frame {
+  max-width: 100%;
+  border: 1px solid #C3C1BC;
+  padding: 12px; }
+.img--avatar {
   display: block;
-  color: lighen(#C3C1BC, 20%);
-  font-size: 1.125em;
-  font-weight: 400;
-  text-align: center;
-  padding: 15px 0;
-  border-radius: 3%;
-  text-decoration: none; }
-  .nav__item a:hover {
-    background-color: #19e6b3;
-    color: #fff; }
+  border-radius: 50%; }
+
+@media (min-width: 769px) {
+  .grid__col--1 {
+    width: percentual(0.065); }
+
+  .grid__col--2 {
+    width: percentual(0.15); }
+
+  .grid__col--3 {
+    width: percentual(0.235); }
+
+  .grid__col--4 {
+    width: percentual(0.32); }
+
+  .grid__col--5 {
+    width: percentual(0.405); }
+
+  .grid__col--6 {
+    width: percentual(0.49); }
+
+  .grid__col--7 {
+    width: percentual(0.575); }
+
+  .grid__col--8 {
+    width: percentual(0.66); }
+
+  .grid__col--9 {
+    width: percentual(0.745); }
+
+  .grid__col--10 {
+    width: percentual(0.83); }
+
+  .grid__col--11 {
+    width: percentual(0.915); }
+
+  .grid__col--12 {
+    width: percentual(1); } }
+@media (min-width: 1px) and (max-width: 768px) {
+  [class^="grid__col--"] {
+    margin-top: 12px;
+    margin-bottom: 12px; } }
+@media (min-width: 769px) {
+  [class^="grid__col--"] {
+    float: left;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px; }
+    [class^="grid__col--"] + [class^="grid__col--"] {
+      margin-left: 2%; }
+    [class^="grid__col--"]:last-of-type {
+      float: right; } }
+
+.grid__row {
+  width: 90%; }
+  [class*="grid__col--"] > .grid__row {
+    width: 100%; }
+  @media (min-width: 1100px) {
+    .grid__row {
+      max-width: 1050px; } }
 
 /*# sourceMappingURL=styles.css.map */

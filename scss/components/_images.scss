@@ -1,0 +1,16 @@
+
+//******************************** Images **************************************
+
+.img {
+
+  @include m(frame) {
+    max-width: 100%;
+    border: 1px solid $grey;
+    padding: 12px;
+  }
+
+  @include m(avatar) {
+    display: block;
+    border-radius: 50%;
+  }
+}

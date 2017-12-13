@@ -13,3 +13,16 @@
 @function pxToEm($px, $context: $font-size--base) {
   @return (($px / $context) * 1em);
 }
+
+// To call the color palette modifiers in color Values.
+
+@function palette($palettes, $shade: "base") {
+  @return mapget(mapget($palettes, $color), $shade);
+}
+
+// To set the context width for the grid.
+
+@function g-context($g-col-width, $g-col-count, $g-gutter-width) {
+  $g-context: ($g-col-width * $g-col-count) + ($g-gutter-width * ($g-col-count - 1));
+  @return $g-context; 
+}
