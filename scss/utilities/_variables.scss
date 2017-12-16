@@ -27,6 +27,14 @@ $coral                         : #ff784f;
 $purple-majesty                : #9279c3;
 $scooter                       : #39add1;
 
+$mauve                         : #DEA1FC;
+$anakiwa                       : #92F0FC;
+$mountainMeadow                : #1BB665;
+$easternBlue                   : #1D84AF;
+$fuzzyWuzzyBrown               : #C16157;
+$zest                          : #DE761B;
+$smithApple                    : lighten($mountainMeadow, 20%);
+
 $color-text--base              : $grey;
 $color-text--light             : lighen($grey, 20%);
 $color-text--dark              : darken($grey, 20%);
@@ -67,6 +75,17 @@ $ui-colors: (
   warning                      : $coral,
   info                         : $purple-majesty
 );
+
+$grid-colors: (
+  3                            : $mauve,
+  4                            : $anakiwa,
+  5                            : $mountainMeadow,
+  6                            : $easternBlue,
+  7                            : $fuzzyWuzzyBrown,
+  8                            : $zest,
+  12                           : $smithApple
+);
+
 
 
 //********************************** Grid **************************************

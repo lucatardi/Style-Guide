@@ -123,40 +123,40 @@
 
 @media (min-width: 769px) {
   .grid__col--1 {
-    width: percentual(0.065); }
+    width: 8.3333333333%; }
 
   .grid__col--2 {
-    width: percentual(0.15); }
+    width: 16.6666666667%; }
 
   .grid__col--3 {
-    width: percentual(0.235); }
+    width: 25%; }
 
   .grid__col--4 {
-    width: percentual(0.32); }
+    width: 33.3333333333%; }
 
   .grid__col--5 {
-    width: percentual(0.405); }
+    width: 41.6666666667%; }
 
   .grid__col--6 {
-    width: percentual(0.49); }
+    width: 50%; }
 
   .grid__col--7 {
-    width: percentual(0.575); }
+    width: 58.3333333333%; }
 
   .grid__col--8 {
-    width: percentual(0.66); }
+    width: 66.6666666667%; }
 
   .grid__col--9 {
-    width: percentual(0.745); }
+    width: 75%; }
 
   .grid__col--10 {
-    width: percentual(0.83); }
+    width: 83.3333333333%; }
 
   .grid__col--11 {
-    width: percentual(0.915); }
+    width: 91.6666666667%; }
 
   .grid__col--12 {
-    width: percentual(1); } }
+    width: 100%; } }
 @media (min-width: 1px) and (max-width: 768px) {
   [class^="grid__col--"] {
     margin-top: 12px;
@@ -167,8 +167,6 @@
     min-height: 1px;
     padding-left: 10px;
     padding-right: 10px; }
-    [class^="grid__col--"] + [class^="grid__col--"] {
-      margin-left: 2%; }
     [class^="grid__col--"]:last-of-type {
       float: right; } }
 

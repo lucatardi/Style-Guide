@@ -36,3 +36,13 @@
     @content;
   }
 }
+
+
+
+@mixin width($map) {
+  @each $number, $width in $map {
+    &--#{$number} {
+      width: $width;
+    }
+  }
+}

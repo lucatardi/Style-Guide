@@ -3,12 +3,14 @@
 
 @media (min-width: 769px) {
   @for $i from 1 through $g-col-count {
-    $context: g-context($g-col-width, $g-col-count, $g-gutter-width) !global;
-    // with !global the scope of the variable become global.
-    $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
-
+    // $context: g-context($g-col-width, $g-col-count, $g-gutter-width) !global;
+    // // with !global the scope of the variable become global.
+    // $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
+    $context: 12 !global;
+    $target: $i;
     .grid__col--#{$i} {
-      width: percentual( $target / $context);
+      width: percentage( $target / $context);
+      // background-color: $grid-colors($i);
     }
   }
 }
@@ -21,7 +23,7 @@
   }
 
   @media (min-width: 769px) {
-    @include doubly(percentage($g-gutter-width / $context));
+    //@include doubly(percentage($g-gutter-width / $context));
     float: left;
     min-height: 1px;
     padding-left: 10px;
@@ -33,6 +35,14 @@
 }
 
 
+
+
+
+
+
+
+
+
 //*************************      Grid Rows     *******************************
 
 .grid__row {
@@ -40,8 +50,8 @@
   @extend .centered;
   width: 90%;
 
-  [class*="grid__col--"] > & {             // select all the class starting with
-    width: 100%;                       // "grid__col--" inside a grid__row class
+  [class*="grid__col--"] > & {
+   width: 100%;
   }
 
   @media (min-width: 1100px) {
