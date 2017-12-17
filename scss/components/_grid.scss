@@ -1,38 +1,38 @@
 
 //*************************      Grid Colomn      *******************************
 
-@media (min-width: 769px) {
-  @for $i from 1 through $g-col-count {
-    // $context: g-context($g-col-width, $g-col-count, $g-gutter-width) !global;
-    // // with !global the scope of the variable become global.
-    // $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
-    $context: 12 !global;
-    $target: $i;
-    .grid__col--#{$i} {
-      width: percentage( $target / $context);
-      // background-color: $grid-colors($i);
-    }
-  }
-}
-
-
-[class^="grid__col--"] { //target all the classes starting with "grid__col--"
-  @media (min-width: 1px) and (max-width: 768px) {
-    margin-top: 12px;
-    margin-bottom: 12px;
-  }
-
-  @media (min-width: 769px) {
-    //@include doubly(percentage($g-gutter-width / $context));
-    float: left;
-    min-height: 1px;
-    padding-left: 10px;
-    padding-right: 10px;
-    &:last-of-type {
-      float: right;
-    }
-  }
-}
+// @media (min-width: 769px) {
+//   @for $i from 1 through $g-col-count {
+//     // $context: g-context($g-col-width, $g-col-count, $g-gutter-width) !global;
+//     // // with !global the scope of the variable become global.
+//     // $target: ($g-col-width * $i) + ($g-gutter-width * ($i - 1));
+//     $context: 12 !global;
+//     $target: $i;
+//     .grid__col--#{$i} {
+//       width: percentage( $target / $context);
+//       // background-color: $grid-colors($i);
+//     }
+//   }
+// }
+//
+//
+// [class^="grid__col--"] { //target all the classes starting with "grid__col--"
+//   @media (min-width: 1px) and (max-width: 768px) {
+//     margin-top: 12px;
+//     margin-bottom: 12px;
+//   }
+//
+//   @media (min-width: 769px) {
+//     //@include doubly(percentage($g-gutter-width / $context));
+//     float: left;
+//     min-height: 1px;
+//     padding-left: 10px;
+//     padding-right: 10px;
+//     &:last-of-type {
+//       float: right;
+//     }
+//   }
+// }
 
 
 
@@ -45,16 +45,44 @@
 
 //*************************      Grid Rows     *******************************
 
-.grid__row {
-  @extend .clearfix;
-  @extend .centered;
-  width: 90%;
+.grid {
+  @include e(row) {
+    @extend .centered;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  };
 
-  [class*="grid__col--"] > & {
-   width: 100%;
-  }
+  @include e(col) {
+    @for $i from 1 through 12 {
+      @include m($i) {
+        @extend .centered;
+        background-color: white;
 
-  @media (min-width: 1100px) {
-    max-width: $g-cont-max-w;
-  }
+        flex-basis: pencentage($i * 8.33333);
+      };
+    };
+  };
 }
+
+
+
+
+
+
+
+
+// .grid__row {
+//   @extend .clearfix;
+//   @extend .centered;
+//   width: 90%;
+//
+//   [class*="grid__col--"] > & {
+//    width: 100%;
+//   }
+//
+//   @media (min-width: 1100px) {
+//     max-width: $g-cont-max-w;
+//   }
+// }
