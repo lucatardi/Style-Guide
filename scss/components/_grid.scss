@@ -59,8 +59,9 @@
       @include m($i) {
         @extend .centered;
         background-color: white;
-
-        flex-basis: pencentage($i * 8.33333);
+        @media (min-width: 350px) {
+          flex-basis: pencentage($i * 8.33333);
+        };
       };
     };
   };

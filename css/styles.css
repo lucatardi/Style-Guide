@@ -127,40 +127,64 @@
   flex-direction: row;
   justify-content: space-around; }
 .grid__col--1 {
-  background-color: white;
-  flex-basis: pencentage(8.33333); }
+  background-color: white; }
+  @media (min-width: 350px) {
+    .grid__col--1 {
+      flex-basis: pencentage(8.33333); } }
 .grid__col--2 {
-  background-color: white;
-  flex-basis: pencentage(16.66666); }
+  background-color: white; }
+  @media (min-width: 350px) {
+    .grid__col--2 {
+      flex-basis: pencentage(16.66666); } }
 .grid__col--3 {
-  background-color: white;
-  flex-basis: pencentage(24.99999); }
+  background-color: white; }
+  @media (min-width: 350px) {
+    .grid__col--3 {
+      flex-basis: pencentage(24.99999); } }
 .grid__col--4 {
-  background-color: white;
-  flex-basis: pencentage(33.33332); }
+  background-color: white; }
+  @media (min-width: 350px) {
+    .grid__col--4 {
+      flex-basis: pencentage(33.33332); } }
 .grid__col--5 {
-  background-color: white;
-  flex-basis: pencentage(41.66665); }
+  background-color: white; }
+  @media (min-width: 350px) {
+    .grid__col--5 {
+      flex-basis: pencentage(41.66665); } }
 .grid__col--6 {
-  background-color: white;
-  flex-basis: pencentage(49.99998); }
+  background-color: white; }
+  @media (min-width: 350px) {
+    .grid__col--6 {
+      flex-basis: pencentage(49.99998); } }
 .grid__col--7 {
-  background-color: white;
-  flex-basis: pencentage(58.33331); }
+  background-color: white; }
+  @media (min-width: 350px) {
+    .grid__col--7 {
+      flex-basis: pencentage(58.33331); } }
 .grid__col--8 {
-  background-color: white;
-  flex-basis: pencentage(66.66664); }
+  background-color: white; }
+  @media (min-width: 350px) {
+    .grid__col--8 {
+      flex-basis: pencentage(66.66664); } }
 .grid__col--9 {
-  background-color: white;
-  flex-basis: pencentage(74.99997); }
+  background-color: white; }
+  @media (min-width: 350px) {
+    .grid__col--9 {
+      flex-basis: pencentage(74.99997); } }
 .grid__col--10 {
-  background-color: white;
-  flex-basis: pencentage(83.3333); }
+  background-color: white; }
+  @media (min-width: 350px) {
+    .grid__col--10 {
+      flex-basis: pencentage(83.3333); } }
 .grid__col--11 {
-  background-color: white;
-  flex-basis: pencentage(91.66663); }
+  background-color: white; }
+  @media (min-width: 350px) {
+    .grid__col--11 {
+      flex-basis: pencentage(91.66663); } }
 .grid__col--12 {
-  background-color: white;
-  flex-basis: pencentage(99.99996); }
+  background-color: white; }
+  @media (min-width: 350px) {
+    .grid__col--12 {
+      flex-basis: pencentage(99.99996); } }
 
 /*# sourceMappingURL=styles.css.map */
