@@ -1,28 +1,14 @@
 
 //***********************      Functions      **********************************
 
-// To import the url of the font google only if its variable exists.
-
-@if variable-exists(font-url--google) {
-  @import url(font-url--google);
-}
-
-
-// To convert px in em and get one CSS output only in em.
+//*********************** To convert px in em and get one CSS output only in em.
 
 @function pxToEm($px, $context: $font-size--base) {
   @return (($px / $context) * 1em);
 }
 
-// To call the color palette modifiers in color Values.
+//************************* To call the color palette modifiers in color Values.
 
 @function palette($palettes, $shade: "base") {
   @return mapget(mapget($palettes, $color), $shade);
-}
-
-// To set the context width for the grid.
-
-@function g-context($g-col-width, $g-col-count, $g-gutter-width) {
-   $g-context: ($g-col-width * $g-col-count) + ($g-gutter-width * ($g-col-count - 1));
-  @return $g-context;
 }

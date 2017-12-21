@@ -1,12 +1,16 @@
 
 //**************************      Buttons      *********************************
 
+//*************************************************** Create btn--colors classes
 .btn {
   @include bg-colors($ui-colors);
-
 }
 
-.theme__colors {
-  padding: 15px 0;
+//*************************************************************** Format bottons
+[class^="btn"] {
+  @extend %text-btn;
+  width: 100%;
+  border-radius: 5px;
+  padding: 12px 0;
   margin: 10px 0;
 }

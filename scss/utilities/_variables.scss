@@ -1,16 +1,18 @@
 
 //**************************** Font Variables **********************************
 
-// $font-url--google           : "url"; if you want add your favorite google font.
-
 $font-family--primary          : "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family--secondary        : Arial, sans-serif;
 
-// Values for Helvetica Neue found in https://www.cssfontstack.com/Helvetica
+//**** Values for Helvetica Neue found in https://www.cssfontstack.com/Helvetica
 $font-weight--thin             : 100;
 $font-weight--normal           : 400;
 $font-weight--bold             : bold;
 
+$font-size--btn                : 15px;
+$font-size--primary            : 28px;
+$font-size--secondary          : 16px;
+$font-size--blackquote         : 22px;
 
 //****************************** Color *****************************************
 
@@ -77,20 +79,11 @@ $ui-colors: (
 );
 
 $grid-colors: (
-  3                            : $mauve,
-  4                            : $anakiwa,
-  5                            : $mountainMeadow,
-  6                            : $easternBlue,
-  7                            : $fuzzyWuzzyBrown,
-  8                            : $zest,
-  12                           : $smithApple
+  color-3                      : $mauve,
+  color-4                      : $anakiwa,
+  color-5                      : $mountainMeadow,
+  color-6                      : $easternBlue,
+  color-7                      : $fuzzyWuzzyBrown,
+  color-8                      : $zest,
+  color-12                     : $smithApple
 );
-
-
-
-//********************************** Grid **************************************
-
-$g-col-width                   : 65px;
-$g-gutter-width                : 20px;
-$g-col-count                   : 12;
-$g-cont-max-w                  : 1050px;

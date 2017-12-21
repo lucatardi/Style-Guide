@@ -1,13 +1,14 @@
 
 //*************************      Navigation      *******************************
 
+//******************************************************* Styles navigation menu
 .nav {
   display: flex;
   flex-direction: column;
-  margin: 0; // to remove indentation for bullettes
-  padding: 0; // to remove indentation for bullettes
-  list-style-type: none; // remove bullettes from list
-  @include e(item) {
+  margin: 0;                              // to remove indentation for bullettes
+  padding: 0;                             // to remove indentation for bullettes
+  list-style-type: none;                           // remove bullettes from list
+  @include e(item) {           
     color: $color-text--light;
     font-size: 1.125em;
     font-weight: $font-weight--normal;
@@ -20,10 +21,4 @@
       }
     }
   }
-}
-
-
-.img--logo {
-  width: 150px;
-  padding: 20px;
 }

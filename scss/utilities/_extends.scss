@@ -3,8 +3,12 @@
 
 // Nav-Items
 
-%nav-item-display {
-  // add later
+%text-btn {
+  text-align: center;
+  color: $white;
+  text-transform: uppercase;
+  font-weight: $font-weight--bold;
+  font-size: $font-size--btn;
 }
 
 %nav-item-link {
@@ -26,12 +30,16 @@
   font-family: $font-family--primary;
   weight: $font-weight--normal;
   color: $water-green;
+  font-size: $font-size--primary;
   padding: 0 20px;
+  [class^="grid__col--"] > & {
+    margin-left: 50px;
+  }
 }
 
 %headline-sec {
   font-family: $font-family--secondary;
-  weight: $font-weight--normal;
+  weight: $font-weight--thin;
   color: $grey;
-  font-size: em(24px);
+  font-size: $font-size--secondary;
 }

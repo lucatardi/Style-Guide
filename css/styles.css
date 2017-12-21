@@ -1,3 +1,10 @@
+[class^="btn"] {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 15px; }
+
 .nav__item a {
   display: block;
   text-decoration: none;
@@ -12,13 +19,16 @@
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   weight: 400;
   color: #60f7cf;
+  font-size: 28px;
   padding: 0 20px; }
+  [class^="grid__col--"] > .headline--primary {
+    margin-left: 50px; }
 
 .headline--secondary {
   font-family: Arial, sans-serif;
-  weight: 400;
+  weight: 100;
   color: #C3C1BC;
-  font-size: em(24px); }
+  font-size: 16px; }
 
 .srt, .form__label--hidden {
   border: 0;
@@ -30,29 +40,23 @@
   position: absolute;
   width: 1px; }
 
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-.centered, .grid__row, .grid__col--1, .grid__col--2, .grid__col--3, .grid__col--4, .grid__col--5, .grid__col--6, .grid__col--7, .grid__col--8, .grid__col--9, .grid__col--10, .grid__col--11, .grid__col--12 {
-  float: none;
-  margin-left: auto;
-  margin-right: auto; }
+.centered, .container, .grid__row, .grid__col--1, .grid__col--2, .grid__col--3, .grid__col--4, .grid__col--5, .grid__col--6, .grid__col--7, .grid__col--8, .grid__col--9, .grid__col--10, .grid__col--11, .grid__col--12 {
+  align-self: center;
+  margin: auto; }
 
 .card p {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   weight: 400;
   padding: 70px 0;
   line-height: 1.5;
-  color: lighen(#C3C1BC, 20%); }
+  color: gray; }
 
 .card p {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   weight: 400;
   padding: 30px 0 20px;
   line-height: 1.5;
-  color: lighen(#C3C1BC, 20%); }
+  color: gray; }
 
 .blockquote {
   padding-left: 20px;
@@ -91,8 +95,10 @@
 .btn--info {
   background-color: #9279c3; }
 
-.theme__colors {
-  padding: 15px 0;
+[class^="btn"] {
+  width: 100%;
+  border-radius: 5px;
+  padding: 12px 0;
   margin: 10px 0; }
 
 .nav {
@@ -109,10 +115,6 @@
     .nav__item a {
       color: #C3C1BC; }
 
-.img--logo {
-  width: 150px;
-  padding: 20px; }
-
 .img--frame {
   max-width: 100%;
   border: 1px solid #C3C1BC;
@@ -121,68 +123,73 @@
   display: block;
   border-radius: 50%; }
 
-.grid__row {
+.container {
   width: 90%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column; }
+
+.grid__row {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
   justify-content: space-around; }
 .grid__col--1 {
-  background-color: white; }
+  width: 100%; }
   @media (min-width: 350px) {
     .grid__col--1 {
       flex-basis: pencentage(8.33333); } }
 .grid__col--2 {
-  background-color: white; }
+  width: 100%; }
   @media (min-width: 350px) {
     .grid__col--2 {
       flex-basis: pencentage(16.66666); } }
 .grid__col--3 {
-  background-color: white; }
+  width: 100%; }
   @media (min-width: 350px) {
     .grid__col--3 {
       flex-basis: pencentage(24.99999); } }
 .grid__col--4 {
-  background-color: white; }
+  width: 100%; }
   @media (min-width: 350px) {
     .grid__col--4 {
       flex-basis: pencentage(33.33332); } }
 .grid__col--5 {
-  background-color: white; }
+  width: 100%; }
   @media (min-width: 350px) {
     .grid__col--5 {
       flex-basis: pencentage(41.66665); } }
 .grid__col--6 {
-  background-color: white; }
+  width: 100%; }
   @media (min-width: 350px) {
     .grid__col--6 {
       flex-basis: pencentage(49.99998); } }
 .grid__col--7 {
-  background-color: white; }
+  width: 100%; }
   @media (min-width: 350px) {
     .grid__col--7 {
       flex-basis: pencentage(58.33331); } }
 .grid__col--8 {
-  background-color: white; }
+  width: 100%; }
   @media (min-width: 350px) {
     .grid__col--8 {
       flex-basis: pencentage(66.66664); } }
 .grid__col--9 {
-  background-color: white; }
+  width: 100%; }
   @media (min-width: 350px) {
     .grid__col--9 {
       flex-basis: pencentage(74.99997); } }
 .grid__col--10 {
-  background-color: white; }
+  width: 100%; }
   @media (min-width: 350px) {
     .grid__col--10 {
       flex-basis: pencentage(83.3333); } }
 .grid__col--11 {
-  background-color: white; }
+  width: 100%; }
   @media (min-width: 350px) {
     .grid__col--11 {
       flex-basis: pencentage(91.66663); } }
 .grid__col--12 {
-  background-color: white; }
+  width: 100%; }
   @media (min-width: 350px) {
     .grid__col--12 {
       flex-basis: pencentage(99.99996); } }

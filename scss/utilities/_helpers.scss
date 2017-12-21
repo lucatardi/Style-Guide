@@ -1,7 +1,8 @@
 
 //***********************      Helpers      **********************************
 
-.srt { //class for screen reader text (hide element in style)
+//************************* Class for screen reader text (hide element in style)
+.srt {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -12,16 +13,8 @@
   width: 1px;
 }
 
-.clearfix { //class to clean float.
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-
-.centered { //class to center element
-  float: none;
-  margin-left: auto;
-  margin-right: auto;
+//****************************************************** Class to center element
+.centered {
+  align-self: center;
+  margin: auto;
 }

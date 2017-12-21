@@ -1,8 +1,7 @@
 
 //**************************      Mixins      **********************************
 
-// Background color mixin
-
+//******************************************************* Background color mixin
 @mixin bg-colors($map) {
   @each $theme, $color in $map {
     &--#{$theme} {
@@ -12,8 +11,7 @@
 }
 
 
-// BEM selectors
-
+//**************************************************************** BEM selectors
 @mixin e($element) {
   &__#{$element} {
     @content;
@@ -26,19 +24,7 @@
   }
 }
 
-
-
-// Adjacent sibling margins
-
-@mixin doubly($margin: 1em) {
-  & + & {
-    margin-left: $margin;
-    @content;
-  }
-}
-
-
-
+//*********************************************************** Width grid element
 @mixin width($map) {
   @each $number, $width in $map {
     &--#{$number} {
