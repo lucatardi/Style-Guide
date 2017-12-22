@@ -9,11 +9,12 @@
 //*************************************************************** Format bottons
 [class^="btn"] {
   @extend %text-btn;
-  width: 100%;
+  flex-grow: 1;                  // the container is grid__col--12 in _grid.scss
   border-radius: 5px;
   padding: 12px 0;
   margin: 10px 0;
   @media (min-width: 600px) {
     width: auto;
+    margin: 2%;
   };
 }

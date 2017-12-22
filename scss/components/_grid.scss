@@ -30,7 +30,7 @@
         //@extend .centered;           no changes with this
         //width: 100%;                changed with flex-grow: 1;
         flex-grow: 1;
-
+        display: flex;
         &:last-of-type {
           margin-bottom: 20px;
         }
@@ -40,5 +40,13 @@
         };
       };
     };
+  };
+}
+
+
+.grid__col--12 {                                          //container of buttons
+  flex-direction: column;
+  @media (min-width: 600px) {
+    flex-direction: row;
   };
 }
