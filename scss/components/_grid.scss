@@ -3,31 +3,40 @@
 
 
 
-//*****************************     Flex Box     *******************************
-
+//********************************************************************* Flex-Box
 .container {
   @extend .centered;
   width: 90%;
-  display: flex;
-  flex-direction: column;
+  //display: flex;                      no changes with this
+  // flex-direction: column;
 }
 
 .grid {
   @include e(row) {                                    // row
-    @extend .centered;
+    //@extend .centered;               no changes with this
     display: flex;
-    width: 100%;
+    //width: 100%;                    changed with flex-grow: 1;
+    flex-grow: 1;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    @media (min-width: 600px) {
+      flex-direction: row;
+    };
   };
 
   @include e(col) {
     @for $i from 1 through 12 {
-      @include m($i) {                                // colomn
-        @extend .centered;
-        width: 100%;
-        @media (min-width: 350px) {
-          flex-basis: pencentage($i * 8.33333);
+      @include m($i) {                                                 // colomn
+        //@extend .centered;           no changes with this
+        //width: 100%;                changed with flex-grow: 1;
+        flex-grow: 1;
+
+        &:last-of-type {
+          margin-bottom: 20px;
+        }
+
+        @media (min-width: 600px) {
+          flex-grow: $i;                                    // from 1 through 12
         };
       };
     };

@@ -40,7 +40,7 @@
   position: absolute;
   width: 1px; }
 
-.centered, .container, .grid__row, .grid__col--1, .grid__col--2, .grid__col--3, .grid__col--4, .grid__col--5, .grid__col--6, .grid__col--7, .grid__col--8, .grid__col--9, .grid__col--10, .grid__col--11, .grid__col--12 {
+.centered, .container {
   align-self: center;
   margin: auto; }
 
@@ -100,6 +100,9 @@
   border-radius: 5px;
   padding: 12px 0;
   margin: 10px 0; }
+  @media (min-width: 600px) {
+    [class^="btn"] {
+      width: auto; } }
 
 .nav {
   display: flex;
@@ -124,74 +127,99 @@
   border-radius: 50%; }
 
 .container {
-  width: 90%;
-  display: flex;
-  flex-direction: column; }
+  width: 90%; }
 
 .grid__row {
   display: flex;
-  width: 100%;
+  flex-grow: 1;
   flex-direction: column;
-  justify-content: space-around; }
+  justify-content: center; }
+  @media (min-width: 600px) {
+    .grid__row {
+      flex-direction: row; } }
 .grid__col--1 {
-  width: 100%; }
-  @media (min-width: 350px) {
+  flex-grow: 1; }
+  .grid__col--1:last-of-type {
+    margin-bottom: 20px; }
+  @media (min-width: 600px) {
     .grid__col--1 {
-      flex-basis: pencentage(8.33333); } }
+      flex-grow: 1; } }
 .grid__col--2 {
-  width: 100%; }
-  @media (min-width: 350px) {
+  flex-grow: 1; }
+  .grid__col--2:last-of-type {
+    margin-bottom: 20px; }
+  @media (min-width: 600px) {
     .grid__col--2 {
-      flex-basis: pencentage(16.66666); } }
+      flex-grow: 2; } }
 .grid__col--3 {
-  width: 100%; }
-  @media (min-width: 350px) {
+  flex-grow: 1; }
+  .grid__col--3:last-of-type {
+    margin-bottom: 20px; }
+  @media (min-width: 600px) {
     .grid__col--3 {
-      flex-basis: pencentage(24.99999); } }
+      flex-grow: 3; } }
 .grid__col--4 {
-  width: 100%; }
-  @media (min-width: 350px) {
+  flex-grow: 1; }
+  .grid__col--4:last-of-type {
+    margin-bottom: 20px; }
+  @media (min-width: 600px) {
     .grid__col--4 {
-      flex-basis: pencentage(33.33332); } }
+      flex-grow: 4; } }
 .grid__col--5 {
-  width: 100%; }
-  @media (min-width: 350px) {
+  flex-grow: 1; }
+  .grid__col--5:last-of-type {
+    margin-bottom: 20px; }
+  @media (min-width: 600px) {
     .grid__col--5 {
-      flex-basis: pencentage(41.66665); } }
+      flex-grow: 5; } }
 .grid__col--6 {
-  width: 100%; }
-  @media (min-width: 350px) {
+  flex-grow: 1; }
+  .grid__col--6:last-of-type {
+    margin-bottom: 20px; }
+  @media (min-width: 600px) {
     .grid__col--6 {
-      flex-basis: pencentage(49.99998); } }
+      flex-grow: 6; } }
 .grid__col--7 {
-  width: 100%; }
-  @media (min-width: 350px) {
+  flex-grow: 1; }
+  .grid__col--7:last-of-type {
+    margin-bottom: 20px; }
+  @media (min-width: 600px) {
     .grid__col--7 {
-      flex-basis: pencentage(58.33331); } }
+      flex-grow: 7; } }
 .grid__col--8 {
-  width: 100%; }
-  @media (min-width: 350px) {
+  flex-grow: 1; }
+  .grid__col--8:last-of-type {
+    margin-bottom: 20px; }
+  @media (min-width: 600px) {
     .grid__col--8 {
-      flex-basis: pencentage(66.66664); } }
+      flex-grow: 8; } }
 .grid__col--9 {
-  width: 100%; }
-  @media (min-width: 350px) {
+  flex-grow: 1; }
+  .grid__col--9:last-of-type {
+    margin-bottom: 20px; }
+  @media (min-width: 600px) {
     .grid__col--9 {
-      flex-basis: pencentage(74.99997); } }
+      flex-grow: 9; } }
 .grid__col--10 {
-  width: 100%; }
-  @media (min-width: 350px) {
+  flex-grow: 1; }
+  .grid__col--10:last-of-type {
+    margin-bottom: 20px; }
+  @media (min-width: 600px) {
     .grid__col--10 {
-      flex-basis: pencentage(83.3333); } }
+      flex-grow: 10; } }
 .grid__col--11 {
-  width: 100%; }
-  @media (min-width: 350px) {
+  flex-grow: 1; }
+  .grid__col--11:last-of-type {
+    margin-bottom: 20px; }
+  @media (min-width: 600px) {
     .grid__col--11 {
-      flex-basis: pencentage(91.66663); } }
+      flex-grow: 11; } }
 .grid__col--12 {
-  width: 100%; }
-  @media (min-width: 350px) {
+  flex-grow: 1; }
+  .grid__col--12:last-of-type {
+    margin-bottom: 20px; }
+  @media (min-width: 600px) {
     .grid__col--12 {
-      flex-basis: pencentage(99.99996); } }
+      flex-grow: 12; } }
 
 /*# sourceMappingURL=styles.css.map */
