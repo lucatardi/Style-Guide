@@ -6,14 +6,15 @@
 //********************************************************************* Flex-Box
 .container {
   @extend .centered;
+  margin: auto;
   width: 90%;
   //display: flex;                      no changes with this
   // flex-direction: column;
 }
 
 .grid {
-  @include e(row) {                                    // row
-    //@extend .centered;               no changes with this
+  @include e(row) {                                                       // row
+    @extend .centered;                                    //no changes with this
     display: flex;
     //width: 100%;                    changed with flex-grow: 1;
     flex-grow: 1;
@@ -27,16 +28,22 @@
   @include e(col) {
     @for $i from 1 through 12 {
       @include m($i) {                                                 // colomn
-        //@extend .centered;           no changes with this
-        //width: 100%;                changed with flex-grow: 1;
-        flex-grow: 1;
+        @extend .centered;           //no changes with this
+        width: 100%;                //changed with flex-grow: 1;
         display: flex;
-        &:last-of-type {
-          margin-bottom: 20px;
+        &.theme__colors {         // Select class grid__col--n and theme__colors
+          background-color: map-get($grid-colors, $i);
+          padding: 14px;
+          margin-bottom: 5px;
+          border-radius: 3px;
+
+          &:last-of-type {
+            margin-bottom: 20px;
+          }
         }
 
         @media (min-width: 600px) {
-          flex-grow: $i;                                    // from 1 through 12
+          width: percentage($i/12);
         };
       };
     };
@@ -49,4 +56,8 @@
   @media (min-width: 600px) {
     flex-direction: row;
   };
+}
+
+.theme__colors [class^="grid"] {
+  background-color: blue;
 }
