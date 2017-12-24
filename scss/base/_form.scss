@@ -6,11 +6,15 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  @media(min-width: 600px) {
+    margin-left: 40px;
+  }
   @include e(input) {
     margin: 20px 0;
-    padding: 10px 5px;
+    padding: 10px;
     border: none;
-    border-bottom: solid $green 4px;
+    border-bottom: solid $water-green 5px;
+    font-size: 18px;
   };
   @include e(label) {
     display: block;

@@ -8,13 +8,14 @@
   @extend .centered;
   margin: auto;
   width: 90%;
-  //display: flex;                      no changes with this
-  // flex-direction: column;
+  @media (min-width: 600px) {
+    width: 70%;
+  };
 }
 
 .grid {
   @include e(row) {                                                       // row
-    @extend .centered;                                    //no changes with this
+    @extend .centered;
     display: flex;
     //width: 100%;                    changed with flex-grow: 1;
     flex-grow: 1;
@@ -28,18 +29,20 @@
   @include e(col) {
     @for $i from 1 through 12 {
       @include m($i) {                                                 // colomn
-        @extend .centered;           //no changes with this
-        width: 100%;                //changed with flex-grow: 1;
+        @extend .centered;
+        width: 100%;                                //changed from flex-grow: 1;
         display: flex;
         &.theme__colors {         // Select class grid__col--n and theme__colors
           background-color: map-get($grid-colors, $i);
           padding: 14px;
           margin-bottom: 5px;
           border-radius: 3px;
-
+          @media (min-width: 600px) {
+            margin: 20px 3px;
+          }
           &:last-of-type {
             margin-bottom: 20px;
-          }
+            }
         }
 
         @media (min-width: 600px) {

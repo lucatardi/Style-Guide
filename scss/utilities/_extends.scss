@@ -32,7 +32,7 @@
   color: $water-green;
   font-size: $font-size--primary;
   padding: 0 20px;
-  [class^="grid__col--"] > & {
+  .grid__col--9 > & {
     margin-left: 50px;
   }
 }

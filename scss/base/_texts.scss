@@ -1,14 +1,6 @@
 
 //***********************      Texts      **********************************
 
-.card p {
-  font-family: $font-family--primary;
-  weight: $font-weight--normal;
-  padding: 70px 0;
-  line-height: 1.5;
-  color: gray;
-}
-
 .headline {
   @include m(primary) {
     @extend %headline-prim;
@@ -24,6 +16,10 @@
   padding: 30px 0 20px;
   line-height: 1.5;
   color: gray;
+  a {
+    text-decoration: none;
+    color: $on-blue;
+  }
 }
 
 .blockquote {
