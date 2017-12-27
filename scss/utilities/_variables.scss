@@ -87,3 +87,8 @@ $grid-colors: (
   8                      : $zest,
   12                     : $smithApple
 );
+
+//*************************** Break size queries *******************************
+
+// Add another size to use new break point into the media Queries
+$small-break              : 600px;

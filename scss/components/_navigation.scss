@@ -19,7 +19,7 @@ nav {
   padding: 0;                             // to remove indentation for bullettes
   list-style-type: none;                           // remove bullettes from list
   width: 100%;
-  @media (min-width: 600px) {
+  @include query($small-break) {
     flex-direction: row;
     justify-content: flex-end;
   };
@@ -30,7 +30,7 @@ nav {
     font-weight: $font-weight--normal;
     text-align: center;
     width: 100%;
-    @media (min-width: 600px) {
+    @include query($small-break) {
       width: 100px;
     }
 
