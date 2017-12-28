@@ -39,3 +39,10 @@
     @content;
   };
 }
+
+//********************************************************************* Flex-Box
+
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}

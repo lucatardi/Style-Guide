@@ -13,14 +13,13 @@ nav {
 }
 
 .nav {
-  display: flex;
-  flex-direction: column;
+  @include flex(column);
   margin: 0;                              // to remove indentation for bullettes
   padding: 0;                             // to remove indentation for bullettes
   list-style-type: none;                           // remove bullettes from list
   width: 100%;
   @include query($small-break) {
-    flex-direction: row;
+    @include flex(row);
     justify-content: flex-end;
   };
 

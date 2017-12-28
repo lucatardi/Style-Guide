@@ -3,8 +3,7 @@
 
 .form {
   padding: 50px 0;
-  display: flex;
-  flex-direction: column;
+  @include flex(column);
   flex-grow: 1;
   @include query($small-break) {
     margin-left: 40px;
